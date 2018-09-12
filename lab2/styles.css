@@ -1,0 +1,74 @@
+body {
+	margin-right: 200px;
+	margin-left: 200px;
+
+}
+
+nav {
+	position: fixed;
+	margin-bottom: 50px;
+	padding-top: 0px;
+	margin-top: 0px;
+	background: white;
+	align-content: center;
+}
+
+img {
+	margin: 5px;
+	border: 5px double black;
+}
+
+p {
+	font-family: Times New Roman;
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+section {
+	align-self: center;
+	border: 10px double black;
+	padding: 40px;
+}
+
+h1 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: forte;
+	font-size: 250%;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-family: forte;
+	font-size: 150%;
+	text-align: left;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	background: black;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 25px;
+	align-content: center;
+}
+
+.nav_btn {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 15px; 
+	padding-right: 15px;
+	margin-right: 5px;
+	font-size: 200%;
+	color: black;
+	font-family: forte;
+	text-decoration: none;
+	background: white;
+	border: 5px double black;
+}
