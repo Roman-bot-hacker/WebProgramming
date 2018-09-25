@@ -1,14 +1,18 @@
+@media screen and (min-width: 768px) {
+
 html {
 	background-image: url("resources/background_mp_2.jpg");
 	animation-name: html_back;
-	animation-duration: 100s;
+	animation-duration: 50s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
 body {
-	margin-right: 200px;
-	margin-left: 200px;
+	width: 70%;
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
 	position: relative;
 	background-color: none;
 
@@ -16,6 +20,7 @@ body {
 
 header {
 	position: fixed;
+	display: inline-block;
 	top: 0px;
 	width: auto;
 	height: wrap-content;
@@ -26,6 +31,7 @@ header {
 nav {
 	position: relative;
 	width: 100%;
+	height: wrap-content;
 	align-content: center;
 }
 
@@ -246,5 +252,7 @@ footer {
 	to {
 		background-image: url("resources/background_mp_2.jpg");
 	}
+}
+
 }
 
