@@ -1,61 +1,13 @@
-@media screen and (min-width: 768px) {
-
-html {
-	background-image: url("resources/background_mp_2.jpg");
-	animation-name: html_back;
-	animation-duration: 50s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-body {
-	width: 70%;
-	align-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	background-color: none;
-
-}
-
-header {
-	position: fixed;
-	display: inline-block;
-	top: 0px;
-	width: auto;
-	height: wrap-content;
-	background: white;	
-
-}
-
-nav {
-	position: relative;
-	width: 100%;
-	height: wrap-content;
-	align-content: center;
-}
-
-content {
-}
-
 img {
 	margin: 5px;
 	border: 5px double black;
-	float: right;
+	align-self: right;
 }
 
 figure{
-   width:250px; 
-   overflow:hidden;
-   margin:0;
-}
-figure img{
-   display:block;
-   width:100%;
-   align-content: center;
-}
-div p {
-	font-size: 85%;
+   	width:250px; 
+   	overflow:hidden;
+   	margin:0;
 }
 
 p {
@@ -66,7 +18,7 @@ p {
 
 section {
 	align-self: center;
-	margin-top: 85px;
+	margin-top: 60px;
 	border: 10px double black;
 	padding: 40px;
 	background-color: white;
@@ -88,62 +40,77 @@ h2 {
 	text-align: left;
 }
 
-div a {
-	margin-top: 15px;
-	margin-bottom: 15px;
+table {
 	font-family: forte;
-	color: black;
-	font-size: 100%;
-	text-align: left;
-	text-decoration: none;
+	font-size: 150%;
+	line-height: 2;
+	width: 100%;
+	border: 5px solid black;
+	background-color: #c9c9c9;
 }
 
-a:hover {
-	text-decoration: underline;
+td {
+	border: 2px solid black;
 }
 
-ul {
-	display: inline-block;
-}
-ul li{
-    display: inline-block;
+td:hover {
+	background-color: white;
 }
 
-ul li a:hover {
-    transform: scaleX(10);
-   }
-
-ul li:hover ul { 
-	width: auto;
-    display: block;
-    align-content: center;
-   }
-
-ul ul{
-    text-align: center;
-    display: none;
-    position: absolute;
-    background-color: white;
+th {
+	border: 2px solid black;
 }
 
-ul ul li{
-    display: block;
-    padding: 5px;
+th {
+	background-color: white;
 }
 
-ul ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 80%;
+.cups_logo {
+	max-width: 150px;
+	max-height: 250px;
+	margin-left: 42%;
+	border: none;
 }
 
-ul ul li a:hover {
-	animation-name: menu_btn;
-	animation-duration: 500ms;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
-	animation-fill-mode: forwards;
-}
+	ul {
+		display: inline-block;
+	}
+
+	ul li{
+    	display: inline-block;
+	}
+
+	ul li:hover ul { 
+		width: auto;
+    	display: block;
+    	align-content: center;
+   	}
+
+	ul ul{
+    	text-align: center;
+    	display: none;
+    	position: absolute;
+    	background-color: white;
+	}
+
+	ul ul li{
+    	display: block;
+    	padding: 5px;
+	}
+
+	ul ul li a{
+    	text-decoration: none;
+    	color: black;
+    	font-size: 80%;
+	}
+
+	ul ul li a:hover {
+		animation-name: menu_btn;
+		animation-duration: 500ms;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
 
 footer {
 	background: black;
@@ -154,105 +121,339 @@ footer {
 	align-content: center;
 }
 
-.nav_btn {
-	padding-top: 10px;
-	padding-bottom: 20px;
-	padding-left: 15px; 
-	padding-right: 15px;
-	margin-right: 5px;
-	font-size: 200%;
-	color: black;
-	font-family: forte;
-	text-decoration: none;
-	background: white;
-	border: 5px double black;
-}
-
-.nav_btn:hover {
-	animation-name: menu_btn;
-	animation-duration: 500ms;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
-	animation-fill-mode: forwards;
-}
-
-.cups_bigger_flex {
-	display: flex;
-	justify-content: space-between;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 .logo {
-	margin-left: 75px;
-	margin-top: 5px; 
-	padding-bottom: 5px; 
-	border: none; 
-	padding-right: 10px;
-	animation-name: logo_spin;
-	animation-duration: 30s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-direction: alternate;
-}
-
-.logo:hover {
-	animation-play-state: paused;
-}
-
-@-webkit-keyframes logo_spin {
-	from {
-		transform: rotate(0deg);
+		margin-left: 26px;
+		margin-right: 10px;
+		margin-top: 5px; 
+		padding-bottom: 5px; 
+		border: none; 
+		padding-right: 10px;
+		animation-name: logo_spin;
+		animation-duration: 30s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-direction: alternate;
 	}
-	to {
-		transform: rotate(360deg);
-	}
-}
 
-@-webkit-keyframes menu_btn {
-	from {
+	.logo:hover {
+		animation-play-state: paused;
+	}
+
+	.nav_btn {
+		padding-top: 10px;
+		padding-bottom: 20px;
+		padding-left: 15px; 
+		padding-right: 15px;
+		margin-right: 5px;
+		font-size: 200%;
 		color: black;
-		background-color: white;
+		font-family: forte;
+		text-decoration: none;
+		background: white;
+		border: 5px double black;
 	}
-	to {
-		color: white;
-		background-color: black;
+
+	.nav_btn:hover {
+		animation-name: menu_btn;
+		animation-duration: 500ms;
+		animation-iteration-count: 1;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+	}
+
+	.clearfix::after {
+    	content: "";
+    	clear: both;
+    	display: table;
+	}
+
+	@-webkit-keyframes menu_btn {
+		from {
+			color: black;
+			background-color: white;
+		}
+		to {
+			color: white;
+			background-color: black;
+		}
+	}
+
+	@-webkit-keyframes logo_spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+
+@media screen and (min-width: 1148px) {
+
+	html {
+		background-image: url("resources/background_mp_2.jpg");
+		animation-name: html_back;
+		animation-duration: 50s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	body {
+		width: 70%;
+		align-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		background-color: none;
+
+	}
+
+	header {
+		position: fixed;
+		display: inline-block;
+		top: 0px;
+		width: auto;
+		height: wrap-content;
+		margin-left: auto;
+		margin-right: auto;
+		background: white;
+		border: 12px solid black;	
+
+	}
+
+	#main_pic {
+		border: 10px double black;
+		max-width: 920px;
+		max-height: 350px;
+		margin-top: 15%;
+		margin-left: auto;
+		margin-right: 9px;
+	}
+
+	#nav_menu {
+		display: inline-block;
+		margin-top: 0px;
+		padding-left: 10px;
+		position: relative;
+		width: 100%;
+		height: wrap-content;
+		align-content: center;
+
+	}
+
+	#logo_big {
+		display: inline-block;
+	}
+
+	#small_logo {
+		display: none;
+	}
+
+	div p {
+		font-size: 75%;
+		width: 75%;
+	}
+
+	div a {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-family: forte;
+		color: black;
+		font-size: 75%;
+		text-align: left;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.cup_poster {
+   		display:block;
+   		margin-top: 20px;
+   		margin-left: 0px;
+   		max-width: 200px;
+   		max-height: 200px;
+   		float: left;
+   		border: 10px double black;
+	}
+
+	.cups_bigger_flex {
+		display: inline-flex;
+		width: auto;
+		align-content: left;
+		justify-content: space-between;
+	}
+
+	.cups_small_flex {
+		width: auto;
+		display: flex;
+		align-content: left;
+	}
+
+	@-webkit-keyframes html_back {
+		from {
+			background-image: url("resources/background_mp_2.jpg");
+		}
+		23% {
+			background-image: url("resources/background_mp_2.jpg");
+		}
+		25% {
+			background-image: url("resources/background_mp_3.jpg");
+		}
+		48% {
+			background-image: url("resources/background_mp_3.jpg");
+		}
+		50% {
+			background-image: url("resources/background_mp_4.jpg");
+		}
+		73% {
+			background-image: url("resources/background_mp_4.jpg");
+		}
+		75% {
+			background-image: url("resources/background_mp_5.jpg");
+		}
+		98% {
+			background-image: url("resources/background_mp_5.jpg");
+		}
+		to {
+			background-image: url("resources/background_mp_2.jpg");
+		}
 	}
 }
 
-@-webkit-keyframes html_back {
-	from {
-		background-image: url("resources/background_mp_2.jpg");
+@media screen and (max-width: 1148px) {
+
+	body {
+		width: 100%;
+		align-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		background-color: none;
 	}
-	23% {
-		background-image: url("resources/background_mp_2.jpg");
+
+	header {	
+		position: fixed;
+		background: black;
+		top: 0px;
+		width: 100%;
+		height: wrap-content;
+		margin-left: auto;
+		margin-right: auto;
 	}
-	25% {
-		background-image: url("resources/background_mp_3.jpg");
+
+	#main_pic {
+		display: none;
 	}
-	48% {
-		background-image: url("resources/background_mp_3.jpg");
+
+	#burger_item {
+		width: 50px;
+		height: 50px;
+		border: 4px solid white;
+		margin-left: 10px;
+		margin-top: 5px;
 	}
-	50% {
-		background-image: url("resources/background_mp_4.jpg");
+
+	 #small_logo {
+	 	display: inline;
+	 	border: none;
+	 }
+
+	#logo_big {
+	 	display: none;
+	 	animation-name: none;
+	 }
+
+	#nav_menu {
+		display: none;
+		margin-top: 0px;
+		position: relative;
+		width: 100%;
+		height: wrap-content;
+		align-content: center;
 	}
-	73% {
-		background-image: url("resources/background_mp_4.jpg");
+
+	figure img {
+		margin-top: 3%;
 	}
-	75% {
-		background-image: url("resources/background_mp_5.jpg");
+
+	ul {
+		display: block;
+		width: 100%;
 	}
-	98% {
-		background-image: url("resources/background_mp_5.jpg");
+
+	ul li{
+    	display: flex;
+    	justify-content: space-around;
+    	margin-bottom: 20px;
+    	width: 100%;
 	}
-	to {
-		background-image: url("resources/background_mp_2.jpg");
+
+	ul li a {
+		width: 100%;
+		text-align: center;
+	}
+
+	ul li:hover ul { 
+		width: auto;
+    	display: block;
+    	width: 100%;
+    	align-content: center;
+    	background-color: none;	
+   	}
+
+	ul ul{
+    	text-align: center;
+    	display: none;
+    	position: absolute;
+    	background-color: white;
+	}
+
+	ul ul li{
+    	display: block;
+    	width: 100%;
+    	padding: 5px;
+	}
+
+	ul ul li a{
+    	text-decoration: none;
+    	color: black;
+    	width: 100%;
+    	font-size: 80%;
+	}
+
+	#burger_menu {
+		width: 50px;
+		height: 50px;
+		background: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#burger_menu:hover {
+		animation-name: burger_menu_hover;
+		animation-duration: 500ms;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	.burg_el {
+		width: 70%;
+		height: 10%;
+		background: white;
+	}
+
+	@-webkit-keyframes burger_menu_hover {
+		from {
+			background-color: none;
+		}
+		to {
+			background-color: #c9c9c9;
+		}
 	}
 }
 
-}
 
