@@ -1,7 +1,24 @@
-img {
-	margin: 5px;
-	border: 5px double black;
-	align-self: right;
+a:hover {
+	text-decoration: underline;
+}
+
+div a {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-family: forte;
+	color: black;
+	font-size: 75%;
+	text-align: left;
+	text-decoration: none;
+}
+
+div img {
+	margin-left: 0px;
+}
+
+div p {
+	font-size: 75%;
+	width: 75%;
 }
 
 figure{
@@ -10,18 +27,28 @@ figure{
    	margin:0;
 }
 
-p {
-	font-family: Times New Roman;
-	font-size: 120%;
-	line-height: 1.5;
+form {
+	display: flex;
+	width: 75%;
+	height: 400px;
+	justify-content: space-between;
 }
 
-section {
-	align-self: center;
-	margin-top: 60px;
-	border: 10px double black;
-	padding: 40px;
-	background-color: white;
+footer {
+	background: black;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 25px;
+	align-content: center;
+}
+
+header {
+	z-index: 1;
+}
+
+hr {
+	border-color: black;
 }
 
 h1 {
@@ -38,6 +65,33 @@ h2 {
 	font-family: forte;
 	font-size: 150%;
 	text-align: left;
+}
+
+input {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border: 3px solid black;
+}
+
+img {
+	margin: 5px;
+	border: 5px double black;
+	align-self: right;
+}
+
+p {
+	font-family: Times New Roman;
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+section {
+	align-self: center;
+	align-content: center;
+	margin-top: 60px;
+	border: 10px double black;
+	padding: 20px 20px 20px;
+	background-color: white;
 }
 
 table {
@@ -59,10 +113,53 @@ td:hover {
 
 th {
 	border: 2px solid black;
+	background-color: white;
 }
 
-th {
-	background-color: white;
+ul {
+	display: inline-block;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li:hover ul { 
+	width: auto;
+    display: block;
+    align-content: center;
+}
+
+ul ul{
+    text-align: center;
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+ul ul li{
+    display: block;
+    padding: 5px;
+}
+
+ul ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 80%;
+}
+
+ul ul li a:hover {
+	animation-name: menu_btn;
+	animation-duration: 500ms;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .cups_logo {
@@ -72,120 +169,121 @@ th {
 	border: none;
 }
 
-	ul {
-		display: inline-block;
-	}
+.cups_small_flex {
+	width: auto;
+	display: table-column-group;
+	justify-content: space-around;
+}
 
-	ul li{
-    	display: inline-block;
-	}
-
-	ul li:hover ul { 
-		width: auto;
-    	display: block;
-    	align-content: center;
-   	}
-
-	ul ul{
-    	text-align: center;
-    	display: none;
-    	position: absolute;
-    	background-color: white;
-	}
-
-	ul ul li{
-    	display: block;
-    	padding: 5px;
-	}
-
-	ul ul li a{
-    	text-decoration: none;
-    	color: black;
-    	font-size: 80%;
-	}
-
-	ul ul li a:hover {
-		animation-name: menu_btn;
-		animation-duration: 500ms;
-		animation-iteration-count: 1;
-		animation-timing-function: linear;
-		animation-fill-mode: forwards;
-	}
-
-footer {
-	background: black;
-	color: white;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-top: 25px;
-	align-content: center;
+.cup_poster {
+   	display:block;
+   	margin-top: 20px;
+   	margin-left: 0px;
+   	max-width: 200px;
+   	max-height: 200px;
+   	float: left;
+   	border: 10px double black;
 }
 
 .logo {
-		margin-left: 26px;
-		margin-right: 10px;
-		margin-top: 5px; 
-		padding-bottom: 5px; 
-		border: none; 
-		padding-right: 10px;
-		animation-name: logo_spin;
-		animation-duration: 30s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		animation-direction: alternate;
-	}
+	margin-left: 26px;
+	margin-right: 10px;
+	margin-top: 5px; 
+	padding-bottom: 5px; 
+	border: none; 
+	padding-right: 10px;
+	animation-name: logo_spin;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
 
-	.logo:hover {
-		animation-play-state: paused;
-	}
+.logo:hover {
+	animation-play-state: paused;
+}
 
-	.nav_btn {
-		padding-top: 10px;
-		padding-bottom: 20px;
-		padding-left: 15px; 
-		padding-right: 15px;
-		margin-right: 5px;
-		font-size: 200%;
+.nav_btn {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 15px; 
+	padding-right: 15px;
+	margin-right: 5px;
+	font-size: 200%;
+	color: black;
+	font-family: forte;
+	text-decoration: none;
+	background: white;
+	border: 5px double black;
+}
+
+.nav_btn:hover {
+	animation-name: menu_btn;
+	animation-duration: 500ms;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+.fans_under_article {
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.fans_subtext {
+	font-size: 120%;
+}
+
+.submit_button {
+	width: 120px;
+	height: 60px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left: auto;
+	font-family: forte;
+	font-size: 120%;
+}
+
+.struct_div {
+	margin-top: 10%;
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+#map {
+	margin-right: 0px;
+	margin-left: auto;
+    height: 400px; 
+    width: 100%;
+}
+
+#appeal_form {
+	background-color: white;
+	width: 50%;
+	height: 150px;
+}
+
+@-webkit-keyframes logo_spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes menu_btn {
+	from {
 		color: black;
-		font-family: forte;
-		text-decoration: none;
-		background: white;
-		border: 5px double black;
+		background-color: white;
 	}
-
-	.nav_btn:hover {
-		animation-name: menu_btn;
-		animation-duration: 500ms;
-		animation-iteration-count: 1;
-		animation-timing-function: ease;
-		animation-fill-mode: forwards;
+	to {
+		color: white;
+		background-color: black;
 	}
-
-	.clearfix::after {
-    	content: "";
-    	clear: both;
-    	display: table;
-	}
-
-	@-webkit-keyframes menu_btn {
-		from {
-			color: black;
-			background-color: white;
-		}
-		to {
-			color: white;
-			background-color: black;
-		}
-	}
-
-	@-webkit-keyframes logo_spin {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
-	}
+}
 
 
 @media screen and (min-width: 1148px) {
@@ -221,6 +319,13 @@ footer {
 
 	}
 
+	.cups_bigger_flex {
+		display: inline-flex;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-between;
+	}
+
 	#main_pic {
 		border: 10px double black;
 		max-width: 920px;
@@ -249,46 +354,10 @@ footer {
 		display: none;
 	}
 
-	div p {
-		font-size: 75%;
-		width: 75%;
-	}
-
-	div a {
-		margin-top: 15px;
-		margin-bottom: 15px;
-		font-family: forte;
-		color: black;
-		font-size: 75%;
-		text-align: left;
-		text-decoration: none;
-	}
-
-	a:hover {
-		text-decoration: underline;
-	}
-
-	.cup_poster {
-   		display:block;
-   		margin-top: 20px;
-   		margin-left: 0px;
-   		max-width: 200px;
-   		max-height: 200px;
-   		float: left;
-   		border: 10px double black;
-	}
-
-	.cups_bigger_flex {
-		display: inline-flex;
-		width: auto;
-		align-content: left;
-		justify-content: space-between;
-	}
-
-	.cups_small_flex {
-		width: auto;
-		display: flex;
-		align-content: left;
+	#news_form {
+		display: flex; 
+		justify-content: space-between; 
+		flex-direction: column;"
 	}
 
 	@-webkit-keyframes html_back {
@@ -343,35 +412,12 @@ footer {
 		margin-right: auto;
 	}
 
-	#main_pic {
-		display: none;
-	}
-
-	#burger_item {
-		width: 50px;
-		height: 50px;
-		border: 4px solid white;
-		margin-left: 10px;
-		margin-top: 5px;
-	}
-
-	 #small_logo {
-	 	display: inline;
-	 	border: none;
-	 }
-
-	#logo_big {
-	 	display: none;
-	 	animation-name: none;
-	 }
-
-	#nav_menu {
-		display: none;
-		margin-top: 0px;
-		position: relative;
-		width: 100%;
-		height: wrap-content;
-		align-content: center;
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 400px;
+		height: 600px;
 	}
 
 	figure img {
@@ -423,6 +469,60 @@ footer {
     	font-size: 80%;
 	}
 
+	.burg_el {
+		width: 70%;
+		height: 10%;
+		background: white;
+	}
+
+	.cups_bigger_flex {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-between;
+	}
+
+	.struct_div {
+		margin-top: 10%;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	#main_pic {
+		display: none;
+	}
+
+	#burger_item {
+		width: 50px;
+		height: 50px;
+		border: 4px solid white;
+		margin-left: 10px;
+		margin-top: 5px;
+	}
+
+	 #small_logo {
+	 	display: inline;
+	 	border: none;
+	 }
+
+	#logo_big {
+	 	display: none;
+	 	animation-name: none;
+	 }
+
+	#nav_menu {
+		display: none;
+		margin-top: 0px;
+		position: relative;
+		width: 100%;
+		height: wrap-content;
+		align-content: center;
+	}
+
 	#burger_menu {
 		width: 50px;
 		height: 50px;
@@ -438,12 +538,6 @@ footer {
 		animation-duration: 500ms;
 		animation-iteration-count: 1;
 		animation-fill-mode: forwards;
-	}
-
-	.burg_el {
-		width: 70%;
-		height: 10%;
-		background: white;
 	}
 
 	@-webkit-keyframes burger_menu_hover {

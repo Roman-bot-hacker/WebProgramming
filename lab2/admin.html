@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Wushu - Admin</title>
+
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="js/nav_burger.js"></script>
+</head>
+<body>
+
+	<header>
+
+		<div style="display: inline-flex; justify-content: space-between; width: 100%">
+		<a id="burger_item" href = "#" onclick="nav_burger_click();">
+			<div id="burger_menu">
+				<div class="burg_el"></div>
+				<div class="burg_el"></div>
+				<div class="burg_el"></div>
+			</div>
+		</a>
+
+		<img id="small_logo" class="logo", src="resources/logo_png.png", alt="logo" align="right", width="50px", height="50px">
+		</div>
+
+		<nav id="nav_menu">
+			<ul style="padding-left: 0px; margin-top: 0px; padding-top: 15px; z-index: 0">
+			<li><a class="nav_btn" href="index.html">Main</a></li>
+			<li>
+				<a class="nav_btn" href="cups.html">Cups</a>
+				<ul class="nav_btn" style="animation: none;">
+					<li><a href="cups.html#taolu_cups">Taolu</a></li>
+					<li><a href="cups.html#sanda_cups">Sanda</a></li>
+					<li><a href="cups.html#tradi_cups">Traditional</a></li>
+				</ul>
+			</li>
+			<li><a class="nav_btn" href="news.html">News</a></li>
+			<li><a class="nav_btn" href="fans.html">Fans</a></li>
+			<li><a class="nav_btn" href="contacts.html">Contacts</a></li>
+			<li><a class="nav_btn" href="admin.html">Admin</a></li>
+			<li></li>
+			<div class="clearfix"></div>
+			</ul>
+			<img id="logo_big" class="logo", src="resources/logo_png.png", alt="logo" align="right", width="70px", height="70px">
+		</nav>
+
+	</header>
+
+	<content>
+		<section>
+		<h1>Add news</h1>
+		<form>
+			<input type="image" name="news_image" src="resources/admin_add_image.jpg" style="max-height: 400px; max-height: 300px;">
+			<input class="submit_button" type="submit" name="image_submit" value="Add image">
+		</form>
+		<hr>
+		<form id="news_form">
+			<input type="text" name="news_title" value="News title" style="width: 50%; height: 50px;">
+			<div class="struct_div" style="margin-top: 0px;">
+				<input type="text" name="text_news" value="News text" style="width: 75%; height: 200px;">
+				<input class="submit_button" type="submit" name="news_submit" value="Add news">
+			</div>
+		</form>
+		</section>
+	</content>
+
+	<footer>
+		<p align="center">To learn more about wushu you can visit official sites of <a href="http://www.iwuf.org/", style="text-decoration: none; color: white;"><b>World Wushu Federation</b></a> or <a href="http://www.wushuua.com/", style="text-decoration: none; color: white;"><b>Ukrainian Wushu Federation</b></a>. </p>
+	</footer>
+</body>
+</html>
