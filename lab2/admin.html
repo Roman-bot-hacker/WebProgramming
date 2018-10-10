@@ -6,6 +6,8 @@
 
 	<title>Wushu - Admin</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,10 +26,10 @@
 		<img id="small_logo" class="logo", src="resources/logo_png.png", alt="logo" align="right", width="50px", height="50px">
 		</div>
 
-		<nav id="nav_menu">
+		<nav id="nav_menu" class="navbar">
 			<ul style="padding-left: 0px; margin-top: 0px; padding-top: 15px; z-index: 0">
-			<li><a class="nav_btn" href="index.html">Main</a></li>
-			<li>
+			<li class="nav_li" class="col-md-2"><a class="nav_btn" href="index.html">Main</a></li>
+			<li class="nav_li" class="col-md-2">
 				<a class="nav_btn" href="cups.html">Cups</a>
 				<ul class="nav_btn" style="animation: none;">
 					<li><a href="cups.html#taolu_cups">Taolu</a></li>
@@ -35,11 +37,10 @@
 					<li><a href="cups.html#tradi_cups">Traditional</a></li>
 				</ul>
 			</li>
-			<li><a class="nav_btn" href="news.html">News</a></li>
-			<li><a class="nav_btn" href="fans.html">Fans</a></li>
-			<li><a class="nav_btn" href="contacts.html">Contacts</a></li>
-			<li><a class="nav_btn" href="admin.html">Admin</a></li>
-			<li></li>
+			<li class="nav_li" class="col-md-2"><a class="nav_btn" href="news.html">News</a></li>
+			<li class="nav_li" class="col-md-2"><a class="nav_btn" href="fans.html">Fans</a></li>
+			<li class="nav_li" class="col-md-2"><a class="nav_btn" href="contacts.html">Contacts</a></li>
+			<li class="nav_li" class="col-md-2"><a class="nav_btn" href="admin.html">Admin</a></li>
 			<div class="clearfix"></div>
 			</ul>
 			<img id="logo_big" class="logo", src="resources/logo_png.png", alt="logo" align="right", width="70px", height="70px">
@@ -58,7 +59,7 @@
 		<form id="news_form">
 			<input type="text" name="news_title" value="News title" style="width: 50%; height: 50px;">
 			<div class="struct_div" style="margin-top: 0px;">
-				<input type="text" name="text_news" value="News text" style="width: 75%; height: 200px;">
+				<textarea style="width: 75%; height: 200px; border: 3px solid black;">New article</textarea>
 				<input class="submit_button" type="submit" name="news_submit" value="Add news">
 			</div>
 		</form>

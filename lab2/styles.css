@@ -88,7 +88,7 @@ p {
 section {
 	align-self: center;
 	align-content: center;
-	margin-top: 60px;
+	margin-top: 100px;
 	border: 10px double black;
 	padding: 20px 20px 20px;
 	background-color: white;
@@ -118,10 +118,12 @@ th {
 
 ul {
 	display: inline-block;
+	justify-content: space-between;
 }
 
 ul li{
     display: inline-block;
+    justify-content: space-around;
 }
 
 ul li:hover ul { 
@@ -179,14 +181,14 @@ ul ul li a:hover {
    	display:block;
    	margin-top: 20px;
    	margin-left: 0px;
-   	max-width: 200px;
-   	max-height: 200px;
+   	max-width: 150px;
+   	max-height: 150px;
    	float: left;
    	border: 10px double black;
 }
 
 .logo {
-	margin-left: 26px;
+	margin-left: 16px;
 	margin-right: 10px;
 	margin-top: 5px; 
 	padding-bottom: 5px; 
@@ -203,12 +205,19 @@ ul ul li a:hover {
 	animation-play-state: paused;
 }
 
+.nav_li {
+	padding-left: 0px;
+	padding-right: 12px;
+}
+
 .nav_btn {
+	width: 20%;
 	padding-top: 10px;
 	padding-bottom: 20px;
-	padding-left: 15px; 
-	padding-right: 15px;
-	margin-right: 5px;
+	padding-left: 10%; 
+	padding-right: 5%;
+	margin-right: 0%;
+	margin-left: auto;
 	font-size: 200%;
 	color: black;
 	font-family: forte;
@@ -252,6 +261,11 @@ ul ul li a:hover {
 	justify-content: space-between;
 }
 
+#small_logo {
+	display: none;
+	visibility: none;
+	}
+
 #map {
 	margin-right: 0px;
 	margin-left: auto;
@@ -286,7 +300,7 @@ ul ul li a:hover {
 }
 
 
-@media screen and (min-width: 1148px) {
+@media screen and (min-width: 1048px) {
 
 	html {
 		background-image: url("resources/background_mp_2.jpg");
@@ -310,12 +324,12 @@ ul ul li a:hover {
 		position: fixed;
 		display: inline-block;
 		top: 0px;
-		width: auto;
+		width: 70%;
 		height: wrap-content;
 		margin-left: auto;
 		margin-right: auto;
 		background: white;
-		border: 12px solid black;	
+		border: 6px solid black;	
 
 	}
 
@@ -328,11 +342,11 @@ ul ul li a:hover {
 
 	#main_pic {
 		border: 10px double black;
-		max-width: 920px;
+		width: 100%;
 		max-height: 350px;
-		margin-top: 15%;
+		margin-top: 150px;
 		margin-left: auto;
-		margin-right: 9px;
+		margin-right: auto;
 	}
 
 	#nav_menu {
@@ -348,6 +362,7 @@ ul ul li a:hover {
 
 	#logo_big {
 		display: inline-block;
+		position: static;
 	}
 
 	#small_logo {
@@ -391,7 +406,7 @@ ul ul li a:hover {
 	}
 }
 
-@media screen and (max-width: 1148px) {
+@media screen and (max-width: 1048px) {
 
 	body {
 		width: 100%;
@@ -403,7 +418,7 @@ ul ul li a:hover {
 	}
 
 	header {	
-		position: fixed;
+		position: relative;
 		background: black;
 		top: 0px;
 		width: 100%;
@@ -424,9 +439,14 @@ ul ul li a:hover {
 		margin-top: 3%;
 	}
 
+	nav {
+		width: 100%;
+	}
+
 	ul {
 		display: block;
 		width: 100%;
+		align-content: left;
 	}
 
 	ul li{
@@ -492,6 +512,11 @@ ul ul li a:hover {
 		justify-content: space-between;
 	}
 
+	.nav_btn {
+		margin-left: 0px;
+		margin-right: auto;
+	}
+
 	#main_pic {
 		display: none;
 	}
@@ -520,12 +545,14 @@ ul ul li a:hover {
 		position: relative;
 		width: 100%;
 		height: wrap-content;
-		align-content: center;
+		align-content: left;
 	}
 
 	#burger_menu {
 		width: 50px;
 		height: 50px;
+		margin-left: -4px;
+		margin-top: -3px;
 		background: none;
 		display: flex;
 		flex-direction: column;
