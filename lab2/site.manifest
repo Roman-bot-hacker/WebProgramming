@@ -1,0 +1,19 @@
+CACHE MANIFEST
+
+#version 0.1
+
+index.html
+fans.html
+news.html
+cups.html
+contacts.html
+style.css
+recources/logo_png.png
+recources/mainpage_pic.jpg
+resources/dragon.png
+recources/lion.png
+recources/eagle.png
+nav_burger.js
+
+FALLBACK:
+admin.html error.html
