@@ -16,11 +16,6 @@ div img {
 	margin-left: 0px;
 }
 
-div p {
-	font-size: 75%;
-	width: 75%;
-}
-
 figure{
    	width:250px; 
    	overflow:hidden;
@@ -173,7 +168,7 @@ ul ul li a:hover {
 
 .cups_small_flex {
 	width: auto;
-	display: table-column-group;
+	display: block;
 	justify-content: space-around;
 }
 
@@ -183,7 +178,7 @@ ul ul li a:hover {
    	margin-left: 0px;
    	max-width: 150px;
    	max-height: 150px;
-   	float: left;
+   	float: bottom;
    	border: 10px double black;
 }
 
@@ -244,6 +239,13 @@ ul ul li a:hover {
 	font-size: 120%;
 }
 
+.news_text {
+	margin-top: 5px;
+	font-size: 75%;
+	width: 150px;
+	margin: 0px;
+}
+
 .submit_button {
 	width: 120px;
 	height: 60px;
@@ -255,7 +257,7 @@ ul ul li a:hover {
 }
 
 .struct_div {
-	margin-top: 10%;
+	margin-top: 5%;
 	display: inline-flex;
 	width: 100%;
 	justify-content: space-between;
@@ -530,13 +532,13 @@ ul ul li a:hover {
 	}
 
 	 #small_logo {
+	 	position: static;
 	 	display: inline;
 	 	border: none;
 	 }
 
 	#logo_big {
 	 	display: none;
-	 	animation-name: none;
 	 }
 
 	#nav_menu {

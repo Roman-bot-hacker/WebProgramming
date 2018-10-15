@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
 <head>
 	<meta charset="UTF8">
    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Wushu - Admin</title>
-
-	<link rel="manifest" href="site.manifest">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -53,18 +51,26 @@
 	<content>
 		<section>
 		<h1>Add news</h1>
-		<form>
-			<input type="image" name="news_image" src="resources/admin_add_image.jpg" style="max-height: 400px; max-height: 300px;">
-			<input class="submit_button" type="submit" name="image_submit" value="Add image">
-		</form>
-		<hr>
-		<form id="news_form">
-			<input type="text" name="news_title" value="News title" style="width: 50%; height: 50px;">
-			<div class="struct_div" style="margin-top: 0px;">
-				<textarea style="width: 75%; height: 200px; border: 3px solid black;">New article</textarea>
-				<input class="submit_button" type="submit" name="news_submit" value="Add news">
+			<div class="container-fluid">
+				<div class="col-md-12">
+					<input type="image" name="news_image" src="resources/admin_add_image.jpg" style="max-width: 60%; max-height: 60%;">
+				</div>
+				<div class="col-md-12">
+					<input class="submit_button" type="submit" name="image_submit" value="Add image">
+				</div>
 			</div>
-		</form>
+		<hr>
+			<div class="container-fluid" style="margin-top: 0px;">
+				<div class="col-md-12">
+					<input type="text" name="news_title" value="News title" style="width: 50%; height: 50px;">
+				</div>
+				<div class="col-md-12">
+					<textarea style="width: 75%; height: 200px; border: 3px solid black;">New article</textarea>
+				</div>
+				<div class="col-md-12">
+					<input class="submit_button" type="submit" name="news_submit" value="Add news">
+				</div>
+			</div>
 		</section>
 	</content>
 

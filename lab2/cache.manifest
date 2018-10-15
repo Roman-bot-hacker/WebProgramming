@@ -1,0 +1,20 @@
+CACHE MANIFEST
+
+#version 0.2
+
+CACHE:
+index.html
+fans.html
+cups.html
+contacts.html
+styles.css
+js/nav_burger.js
+css/bootstrap.min.css
+
+NETWORK:
+news.html
+admin.html
+
+FALLBACK:
+news.html error.html
+admin.html error.html
