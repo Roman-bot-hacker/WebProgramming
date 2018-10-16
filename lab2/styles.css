@@ -98,6 +98,10 @@ table {
 	background-color: #c9c9c9;
 }
 
+script {
+    display: block;
+}
+
 td {
 	border: 2px solid black;
 }
@@ -183,6 +187,7 @@ ul ul li a:hover {
 }
 
 .logo {
+	position: static;
 	margin-left: 16px;
 	margin-right: 10px;
 	margin-top: 5px; 
@@ -561,6 +566,7 @@ ul ul li a:hover {
 		justify-content: space-around;
 		align-items: center;
 	}
+	
 
 	#burger_menu:hover {
 		animation-name: burger_menu_hover;

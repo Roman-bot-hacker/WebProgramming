@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-#version 0.2
+#version 0.3
 
 CACHE:
 index.html
@@ -10,10 +10,14 @@ contacts.html
 styles.css
 js/nav_burger.js
 css/bootstrap.min.css
+resources/background_mp_2.jpg
+resources/background_mp_3.jpg
+resources/background_mp_4.jpg
+resources/background_mp_5.jpg
+
 
 NETWORK:
-news.html
-admin.html
+*
 
 FALLBACK:
 news.html error.html
