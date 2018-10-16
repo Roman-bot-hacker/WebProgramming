@@ -53,22 +53,22 @@
 		<h1>Add news</h1>
 			<div class="container-fluid">
 				<div class="col-md-12">
-					<input type="image" name="news_image" src="resources/admin_add_image.jpg" style="max-width: 60%; max-height: 60%;">
+					<input id="news_image" type="image" name="news_image" src="resources/admin_add_image.jpg" style="max-width: 60%; max-height: 60%;">
 				</div>
 				<div class="col-md-12">
-					<input class="submit_button" type="submit" name="image_submit" value="Add image">
+					<input id="image_submit" class="submit_button" type="button" value="Add image">
 				</div>
 			</div>
 		<hr>
 			<div class="container-fluid" style="margin-top: 0px;">
 				<div class="col-md-12">
-					<input type="text" name="news_title" value="News title" style="width: 50%; height: 50px;">
+					<input id="news_title" type="text" value="News title" style="width: 50%; height: 50px;">
 				</div>
 				<div class="col-md-12">
-					<textarea style="width: 75%; height: 200px; border: 3px solid black;">New article</textarea>
+					<textarea id="news_text" style="width: 75%; height: 200px; border: 3px solid black;">New article</textarea>
 				</div>
 				<div class="col-md-12">
-					<input class="submit_button" type="submit" name="news_submit" value="Add news">
+					<input id="submit_news" class="submit_button" type="button" onclick="checkNews();" name="news_submit" value="Add news">
 				</div>
 			</div>
 		</section>

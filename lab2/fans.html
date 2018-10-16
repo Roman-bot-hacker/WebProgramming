@@ -53,6 +53,8 @@
 		<section>
 			<h1>Fans appeals</h1>
 
+			<div id="appeals_section">
+
 			<article>
 				<p>The International Wushu Federation (IWUF), which was established on October 3rd, 1990, is the international federation (IF) which governs wushu in all its forms worldwide. Currently, the IWUF has 149 members, across 5 continental federations worldwide. The IWUF is recognized by the International Olympic Committee (IOC), and is also a member of both ARISF and GAISF.</p>
 				<div class="fans_under_article">
@@ -71,9 +73,11 @@
 				<hr>
 			</article>
 
+			</div>
+
 			<form style="height: 200px;">
-				<input id="appeal_form" type="text" name="appeal_form" value="Write an appeal...">
-				<input class="submit_button" type="submit" name="submit_appeal", value="Submit" align="right">
+				<textarea id="appeal_form" style="width: 75%; height: 200px; border: 3px solid black;">Write an appeal...</textarea>
+				<input id="add_appeal" class="submit_button" type="button" onclick="checkAppeal();" value="Submit" align="right">
 			</form>
 
 		</section>
