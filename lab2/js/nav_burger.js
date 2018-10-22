@@ -68,6 +68,7 @@ function checkNews() {
     document.getElementById("news_image").src = "resources/admin_add_image.jpg";
     document.getElementById("news_title").value = "News title";
     document.getElementById("news_text").value = "New article";
+    send()
     alert("Your news has added successfully!")
   } 
 }

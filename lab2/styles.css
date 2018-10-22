@@ -251,6 +251,11 @@ ul ul li a:hover {
 	margin: 0px;
 }
 
+.online {
+    background-color: limegreen;
+}
+
+
 .submit_button {
 	width: 120px;
 	height: 60px;
