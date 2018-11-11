@@ -31,44 +31,47 @@ function checkAppeal() {
     document.getElementById('appeal_form').style.borderColor = 'black';
     var appeal = document.getElementById('appeal_form').value;
     document.getElementById('appeal_form').value = "Write an appeal...";
-    addAppeal(appeal);
+    sendAppeal(appeal);
+    alert("Your appeal added successfully!");
   }
 }
 
+const feedbackTemplateAppeal = (text, date, nickname) => ` 
+    <article>
+      <p>${text}</p>
+      <div class="fans_under_article">
+        <p class="fans_subtext">${date}</p>
+        <p class="fans_subtext" align="right">${nickname}</p>
+      </div>
+      <hr>
+    </article>
+`
+
 function addAppeal(appeal) {
-  var newAppeal = document.createElement('article');
-  var aText = document.createElement('p');
-  aText.innerHTML = appeal;
-  var newHr = document.createElement('hr');
-  var dateTime = new Date();
-  var aDate = document.createElement('p');
-  aDate.className = "fans_subtext";
-  aDate.innerHTML = dateTime.getDate() + '.'
-    + (dateTime.getMonth()+1) + '.'
-    + dateTime.getFullYear() + ', '
-    + dateTime.getHours() + ':'
-    + dateTime.getMinutes();
-  var aSignature = document.createElement('p');
-  aSignature.className = "fans_subtext";
-  aSignature.innerHTML = "US Wushu fans";
-  var newDiv = document.createElement('div');
-  newDiv.className = "fans_under_article";
-  newDiv.appendChild(aDate);
-  newDiv.appendChild(aSignature);
-  newAppeal.appendChild(aText);
-  newAppeal.appendChild(newDiv);
-  newAppeal.appendChild(newHr);
-  document.getElementById("appeals_section").appendChild(newAppeal);
+  if (page == "fans.html") {
+    var aText = appeal;
+    var dateTime = new Date();
+    var aDate = dateTime.getDate() + '.'
+      + (dateTime.getMonth()+1) + '.'
+      + dateTime.getFullYear() + ', '
+      + dateTime.getHours() + ':'
+      + dateTime.getMinutes();
+    var aSignature = "US Wushu fans";
+    var node = feedbackTemplateAppeal(aText, aDate, aSignature);
+    document.getElementById("appeals_section").innerHTML += node;
+  }
 }
 
 //CHECK NEWS FUNCTIONS------------------------------------------------------
 
 function checkNews() {
   if (checkNewsTitle() && checkNewsText()) {
+    var title = document.getElementById("news_title").value;
+    var article = document.getElementById("news_text").value;
     document.getElementById("news_image").src = "resources/admin_add_image.jpg";
     document.getElementById("news_title").value = "News title";
     document.getElementById("news_text").value = "New article";
-    send()
+    sendNews(title, article);
     alert("Your news has added successfully!")
   } 
 }
@@ -103,6 +106,26 @@ function checkNewsImage() {
   }
   else {return false;}
 }
+
+const feedbackTemplateNews = (title, text) =>`
+    <div class="col-md-3" style="display: inline-block;">
+      <a href="#">${title}</a>
+      <img class="cup_poster" src="resources/trad_cup_1.jpg", alt="cup_poster" align="bottom">
+      <div class="news_text">
+        <p>${text}</p>
+      </div>
+    </div>
+`
+
+function addNews(title, text) {
+  if (page == "news.html") {
+    var aText = text;
+    var aTitle = title;
+    var node = feedbackTemplateNews(aTitle, aText);
+    document.getElementById("news_conteiner").innerHTML += node;
+  }
+}
+
 
 //IMAGE UPLOAD--------------------------------------------------------
 function uploadNewsImage() {

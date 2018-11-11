@@ -252,9 +252,19 @@ ul ul li a:hover {
 }
 
 .online {
-    background-color: limegreen;
+    border-color: limegreen;
 }
 
+.offline {
+	border-color: orange;
+}
+
+.status-block_list {
+  padding: 0.5em 1em 0px 0.5em;
+  font-family: forte;
+  list-style: disc;
+  list-style-position: inside;
+}
 
 .submit_button {
 	width: 120px;
