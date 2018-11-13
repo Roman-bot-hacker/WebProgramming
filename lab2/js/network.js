@@ -36,7 +36,7 @@ function useIndexedDB(requestDB){
         // get database from event
         while(db == null) {
             db = event.target.result;
-            getSavedData();
+            if(isOnline()){getSavedData();}
         }
     };
 
@@ -92,9 +92,9 @@ function getNewsData(callback) {
 
     request.onsuccess = function (event) {
         data = event.target.result;
-        for (item in data) {
+        /*for (item in data) {
             item = JSON.parse(item)
-        }
+        }*/
         callback(data);
     };
 
@@ -180,12 +180,12 @@ function reportNetworkStatus() {
 
 function sendNews(title, article) {
     //create object to store article information
-    var box = {};
+    var box = new News('news', title, article, new Date().getTime().toString());
 
-    box.title = title;
+    /*box.title = title;
     box.article = article;
-    box.id = new Date().getTime().toString();
-    box.type = 'news';
+    box.id = ;
+    box.type = 'news';*/
     //send message to server or store localy
     storeMessage(box);
 
@@ -193,11 +193,11 @@ function sendNews(title, article) {
 };
 
 function sendAppeal(appeal) {
-	var box = {}
+	var box = new Appeal('appeal', appeal, new Date().getTime().toString());
 
-	box.appeal = appeal;
+	/*box.appeal = appeal;
 	box.id = new Date().getTime().toString();
-	box.type = 'appeal';
+	box.type = 'appeal';*/
 	storeMessage(box);
 
 	return false;
@@ -226,7 +226,10 @@ function storeMessageLocaly(box) {
                }); 
             });
             aPromise.then(
-                result => getSavedData())
+                result => {if(isOnline()){
+                    getSavedData();
+                }
+            })
             }
         else if (box.type == 'news') {addNewsData(box)}
     }
@@ -239,13 +242,13 @@ function postData(box, callback) {
     clearUI();
     if (box.type == "appeal") {
         if (page == "fans.html") {
-            addAppeal(box.appeal);
+            addAppeal(box.body);
             callback(true);
         }
     }
     else if (box.type == "news") {
         if (page == "news.html") {
-            addNews(box.title, box.article);
+            addNews(box.title, box.body);
             callback(true);
         }
     }
@@ -337,6 +340,22 @@ window.addEventListener('offline', function (e) {
 }, true);
 reportNetworkStatus();
 
+class News {
+    constructor(type, title, body, id){
+        this.type = type;
+        this.title = title;
+        this.body = body;
+        this.id = id
+    }
+}
+
+class Appeal {
+    constructor(type, body, id){
+        this.type = type;
+        this.body = body;
+        this.id = id;
+    }
+}
 
 //DB----------------------------------------------------------------------------------------------------------------------------------
 
