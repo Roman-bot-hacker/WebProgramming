@@ -1,11 +1,6 @@
-http:// {
+:80 {
     root /var/www
     gzip
     log logfile.log
-}
-https:// {
-    root /var/www
-    gzip
-    tls /etc/nginx/ssl/nginx.crt /etc/nginx/ssl/nginx.key
 }
 
