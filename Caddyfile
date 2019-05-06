@@ -1,0 +1,10 @@
+http:// {
+    root /var/www
+    gzip
+}
+https://34.73.12.37 {
+    root /var/www
+    gzip
+    tls /etc/nginx/ssl/nginx.crt /etc/nginx/ssl/nginx.key
+}
+log logfile.log
