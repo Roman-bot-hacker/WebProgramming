@@ -1,10 +1,11 @@
 http:// {
     root /var/www
     gzip
+    log logfile.log
 }
-https://34.73.12.37 {
+https:// {
     root /var/www
     gzip
     tls /etc/nginx/ssl/nginx.crt /etc/nginx/ssl/nginx.key
 }
-log logfile.log
+
