@@ -1,6 +1,6 @@
 :80 {
     root /var/www
     gzip
-    log var/logs/logfile.log
+    log /var/logs/logfile.log
 }
 
